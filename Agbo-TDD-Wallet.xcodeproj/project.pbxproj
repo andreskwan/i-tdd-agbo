@@ -14,6 +14,7 @@
 		EA5AF9AD1F38D59500FFC125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5AF9AB1F38D59500FFC125 /* LaunchScreen.storyboard */; };
 		EA5AF9B81F38D59500FFC125 /* Agbo_TDD_WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AF9B71F38D59500FFC125 /* Agbo_TDD_WalletTests.swift */; };
 		EA5AF9C31F38D59500FFC125 /* Agbo_TDD_WalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AF9C21F38D59500FFC125 /* Agbo_TDD_WalletUITests.swift */; };
+		EA5AF9D21F38DA3E00FFC125 /* EuroTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AF9D11F38DA3E00FFC125 /* EuroTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		EA5AF9BE1F38D59500FFC125 /* Agbo-TDD-WalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Agbo-TDD-WalletUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5AF9C21F38D59500FFC125 /* Agbo_TDD_WalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agbo_TDD_WalletUITests.swift; sourceTree = "<group>"; };
 		EA5AF9C41F38D59500FFC125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA5AF9D11F38DA3E00FFC125 /* EuroTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuroTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		EA5AF9B61F38D59500FFC125 /* Agbo-TDD-WalletTests */ = {
 			isa = PBXGroup;
 			children = (
+				EA5AF9D01F38DA2000FFC125 /* Models */,
 				EA5AF9B71F38D59500FFC125 /* Agbo_TDD_WalletTests.swift */,
 				EA5AF9B91F38D59500FFC125 /* Info.plist */,
 			);
@@ -123,6 +126,14 @@
 				EA5AF9C41F38D59500FFC125 /* Info.plist */,
 			);
 			path = "Agbo-TDD-WalletUITests";
+			sourceTree = "<group>";
+		};
+		EA5AF9D01F38DA2000FFC125 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AF9D11F38DA3E00FFC125 /* EuroTest.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5AF9D21F38DA3E00FFC125 /* EuroTest.swift in Sources */,
 				EA5AF9B81F38D59500FFC125 /* Agbo_TDD_WalletTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  Agbo_TDD_WalletTests.swift
+//  EuroTest.swift
 //  Agbo-TDD-WalletTests
 //
 //  Created by Andres Kwan on 8/7/17.
@@ -7,9 +7,8 @@
 //
 
 import XCTest
-@testable import Agbo_TDD_Wallet
 
-class Agbo_TDD_WalletTests: XCTestCase {
+class EuroTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -26,9 +25,6 @@ class Agbo_TDD_WalletTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
-    func testFail()  {
-        XCTAssertFalse(true)
-    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
