@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA5AF9A31F38D59500FFC125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AF9A21F38D59500FFC125 /* AppDelegate.swift */; };
+		EA5AF9A51F38D59500FFC125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AF9A41F38D59500FFC125 /* ViewController.swift */; };
+		EA5AF9A81F38D59500FFC125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5AF9A61F38D59500FFC125 /* Main.storyboard */; };
+		EA5AF9AA1F38D59500FFC125 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5AF9A91F38D59500FFC125 /* Assets.xcassets */; };
+		EA5AF9AD1F38D59500FFC125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5AF9AB1F38D59500FFC125 /* LaunchScreen.storyboard */; };
+		EA5AF9B81F38D59500FFC125 /* Agbo_TDD_WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AF9B71F38D59500FFC125 /* Agbo_TDD_WalletTests.swift */; };
+		EA5AF9C31F38D59500FFC125 /* Agbo_TDD_WalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AF9C21F38D59500FFC125 /* Agbo_TDD_WalletUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA5AF9B41F38D59500FFC125 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA5AF9971F38D59500FFC125 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA5AF99E1F38D59500FFC125;
+			remoteInfo = "Agbo-TDD-Wallet";
+		};
+		EA5AF9BF1F38D59500FFC125 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA5AF9971F38D59500FFC125 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA5AF99E1F38D59500FFC125;
+			remoteInfo = "Agbo-TDD-Wallet";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA5AF99F1F38D59500FFC125 /* Agbo-TDD-Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agbo-TDD-Wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA5AF9A21F38D59500FFC125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA5AF9A41F38D59500FFC125 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA5AF9A71F38D59500FFC125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA5AF9A91F38D59500FFC125 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA5AF9AC1F38D59500FFC125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA5AF9AE1F38D59500FFC125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA5AF9B31F38D59500FFC125 /* Agbo-TDD-WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Agbo-TDD-WalletTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA5AF9B71F38D59500FFC125 /* Agbo_TDD_WalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agbo_TDD_WalletTests.swift; sourceTree = "<group>"; };
+		EA5AF9B91F38D59500FFC125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA5AF9BE1F38D59500FFC125 /* Agbo-TDD-WalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Agbo-TDD-WalletUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA5AF9C21F38D59500FFC125 /* Agbo_TDD_WalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agbo_TDD_WalletUITests.swift; sourceTree = "<group>"; };
+		EA5AF9C41F38D59500FFC125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA5AF99C1F38D59500FFC125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA5AF9B01F38D59500FFC125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA5AF9BB1F38D59500FFC125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA5AF9961F38D59500FFC125 = {
+			isa = PBXGroup;
+			children = (
+				EA5AF9A11F38D59500FFC125 /* Agbo-TDD-Wallet */,
+				EA5AF9B61F38D59500FFC125 /* Agbo-TDD-WalletTests */,
+				EA5AF9C11F38D59500FFC125 /* Agbo-TDD-WalletUITests */,
+				EA5AF9A01F38D59500FFC125 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA5AF9A01F38D59500FFC125 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AF99F1F38D59500FFC125 /* Agbo-TDD-Wallet.app */,
+				EA5AF9B31F38D59500FFC125 /* Agbo-TDD-WalletTests.xctest */,
+				EA5AF9BE1F38D59500FFC125 /* Agbo-TDD-WalletUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA5AF9A11F38D59500FFC125 /* Agbo-TDD-Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AF9A21F38D59500FFC125 /* AppDelegate.swift */,
+				EA5AF9A41F38D59500FFC125 /* ViewController.swift */,
+				EA5AF9A61F38D59500FFC125 /* Main.storyboard */,
+				EA5AF9A91F38D59500FFC125 /* Assets.xcassets */,
+				EA5AF9AB1F38D59500FFC125 /* LaunchScreen.storyboard */,
+				EA5AF9AE1F38D59500FFC125 /* Info.plist */,
+			);
+			path = "Agbo-TDD-Wallet";
+			sourceTree = "<group>";
+		};
+		EA5AF9B61F38D59500FFC125 /* Agbo-TDD-WalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AF9B71F38D59500FFC125 /* Agbo_TDD_WalletTests.swift */,
+				EA5AF9B91F38D59500FFC125 /* Info.plist */,
+			);
+			path = "Agbo-TDD-WalletTests";
+			sourceTree = "<group>";
+		};
+		EA5AF9C11F38D59500FFC125 /* Agbo-TDD-WalletUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AF9C21F38D59500FFC125 /* Agbo_TDD_WalletUITests.swift */,
+				EA5AF9C41F38D59500FFC125 /* Info.plist */,
+			);
+			path = "Agbo-TDD-WalletUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA5AF99E1F38D59500FFC125 /* Agbo-TDD-Wallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA5AF9C71F38D59500FFC125 /* Build configuration list for PBXNativeTarget "Agbo-TDD-Wallet" */;
+			buildPhases = (
+				EA5AF99B1F38D59500FFC125 /* Sources */,
+				EA5AF99C1F38D59500FFC125 /* Frameworks */,
+				EA5AF99D1F38D59500FFC125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Agbo-TDD-Wallet";
+			productName = "Agbo-TDD-Wallet";
+			productReference = EA5AF99F1F38D59500FFC125 /* Agbo-TDD-Wallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA5AF9B21F38D59500FFC125 /* Agbo-TDD-WalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA5AF9CA1F38D59500FFC125 /* Build configuration list for PBXNativeTarget "Agbo-TDD-WalletTests" */;
+			buildPhases = (
+				EA5AF9AF1F38D59500FFC125 /* Sources */,
+				EA5AF9B01F38D59500FFC125 /* Frameworks */,
+				EA5AF9B11F38D59500FFC125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA5AF9B51F38D59500FFC125 /* PBXTargetDependency */,
+			);
+			name = "Agbo-TDD-WalletTests";
+			productName = "Agbo-TDD-WalletTests";
+			productReference = EA5AF9B31F38D59500FFC125 /* Agbo-TDD-WalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA5AF9BD1F38D59500FFC125 /* Agbo-TDD-WalletUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA5AF9CD1F38D59500FFC125 /* Build configuration list for PBXNativeTarget "Agbo-TDD-WalletUITests" */;
+			buildPhases = (
+				EA5AF9BA1F38D59500FFC125 /* Sources */,
+				EA5AF9BB1F38D59500FFC125 /* Frameworks */,
+				EA5AF9BC1F38D59500FFC125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA5AF9C01F38D59500FFC125 /* PBXTargetDependency */,
+			);
+			name = "Agbo-TDD-WalletUITests";
+			productName = "Agbo-TDD-WalletUITests";
+			productReference = EA5AF9BE1F38D59500FFC125 /* Agbo-TDD-WalletUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA5AF9971F38D59500FFC125 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Andres Kwan";
+				TargetAttributes = {
+					EA5AF99E1F38D59500FFC125 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					EA5AF9B21F38D59500FFC125 = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = EA5AF99E1F38D59500FFC125;
+					};
+					EA5AF9BD1F38D59500FFC125 = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = EA5AF99E1F38D59500FFC125;
+					};
+				};
+			};
+			buildConfigurationList = EA5AF99A1F38D59500FFC125 /* Build configuration list for PBXProject "Agbo-TDD-Wallet" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA5AF9961F38D59500FFC125;
+			productRefGroup = EA5AF9A01F38D59500FFC125 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA5AF99E1F38D59500FFC125 /* Agbo-TDD-Wallet */,
+				EA5AF9B21F38D59500FFC125 /* Agbo-TDD-WalletTests */,
+				EA5AF9BD1F38D59500FFC125 /* Agbo-TDD-WalletUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA5AF99D1F38D59500FFC125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA5AF9AD1F38D59500FFC125 /* LaunchScreen.storyboard in Resources */,
+				EA5AF9AA1F38D59500FFC125 /* Assets.xcassets in Resources */,
+				EA5AF9A81F38D59500FFC125 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA5AF9B11F38D59500FFC125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA5AF9BC1F38D59500FFC125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA5AF99B1F38D59500FFC125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA5AF9A51F38D59500FFC125 /* ViewController.swift in Sources */,
+				EA5AF9A31F38D59500FFC125 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA5AF9AF1F38D59500FFC125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA5AF9B81F38D59500FFC125 /* Agbo_TDD_WalletTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA5AF9BA1F38D59500FFC125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA5AF9C31F38D59500FFC125 /* Agbo_TDD_WalletUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA5AF9B51F38D59500FFC125 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA5AF99E1F38D59500FFC125 /* Agbo-TDD-Wallet */;
+			targetProxy = EA5AF9B41F38D59500FFC125 /* PBXContainerItemProxy */;
+		};
+		EA5AF9C01F38D59500FFC125 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA5AF99E1F38D59500FFC125 /* Agbo-TDD-Wallet */;
+			targetProxy = EA5AF9BF1F38D59500FFC125 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA5AF9A61F38D59500FFC125 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA5AF9A71F38D59500FFC125 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA5AF9AB1F38D59500FFC125 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA5AF9AC1F38D59500FFC125 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA5AF9C51F38D59500FFC125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA5AF9C61F38D59500FFC125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA5AF9C81F38D59500FFC125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UG88X33WHR;
+				INFOPLIST_FILE = "Agbo-TDD-Wallet/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kwan.com.Agbo-TDD-Wallet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA5AF9C91F38D59500FFC125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UG88X33WHR;
+				INFOPLIST_FILE = "Agbo-TDD-Wallet/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kwan.com.Agbo-TDD-Wallet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EA5AF9CB1F38D59500FFC125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = UG88X33WHR;
+				INFOPLIST_FILE = "Agbo-TDD-WalletTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kwan.com.Agbo-TDD-WalletTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Agbo-TDD-Wallet.app/Agbo-TDD-Wallet";
+			};
+			name = Debug;
+		};
+		EA5AF9CC1F38D59500FFC125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = UG88X33WHR;
+				INFOPLIST_FILE = "Agbo-TDD-WalletTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kwan.com.Agbo-TDD-WalletTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Agbo-TDD-Wallet.app/Agbo-TDD-Wallet";
+			};
+			name = Release;
+		};
+		EA5AF9CE1F38D59500FFC125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = UG88X33WHR;
+				INFOPLIST_FILE = "Agbo-TDD-WalletUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kwan.com.Agbo-TDD-WalletUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Agbo-TDD-Wallet";
+			};
+			name = Debug;
+		};
+		EA5AF9CF1F38D59500FFC125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = UG88X33WHR;
+				INFOPLIST_FILE = "Agbo-TDD-WalletUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kwan.com.Agbo-TDD-WalletUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Agbo-TDD-Wallet";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA5AF99A1F38D59500FFC125 /* Build configuration list for PBXProject "Agbo-TDD-Wallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA5AF9C51F38D59500FFC125 /* Debug */,
+				EA5AF9C61F38D59500FFC125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA5AF9C71F38D59500FFC125 /* Build configuration list for PBXNativeTarget "Agbo-TDD-Wallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA5AF9C81F38D59500FFC125 /* Debug */,
+				EA5AF9C91F38D59500FFC125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA5AF9CA1F38D59500FFC125 /* Build configuration list for PBXNativeTarget "Agbo-TDD-WalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA5AF9CB1F38D59500FFC125 /* Debug */,
+				EA5AF9CC1F38D59500FFC125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA5AF9CD1F38D59500FFC125 /* Build configuration list for PBXNativeTarget "Agbo-TDD-WalletUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA5AF9CE1F38D59500FFC125 /* Debug */,
+				EA5AF9CF1F38D59500FFC125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA5AF9971F38D59500FFC125 /* Project object */;
+}
