@@ -18,3 +18,9 @@ struct Euro {
      self.amount *= Double(times)
     }
 }
+
+extension Euro: Equatable {
+    static func ==(lhs: Euro, rhs: Euro) -> Bool {
+        return lhs.amount == rhs.amount ? true : false
+    }
+}

@@ -21,4 +21,11 @@ class EuroTest: XCTestCase {
         
         XCTAssertEqual(euro.amount, 10)
     }
+    
+    func testEquality() {
+        let euroLeftPocket = Euro(withAmount:10)
+        let tenEuros = Euro(withAmount:10)
+        
+        XCTAssertEqual(euroLeftPocket, tenEuros)
+    }
 }
