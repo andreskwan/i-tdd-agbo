@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EA5AF99E1F38D59500FFC125"
-               BuildableName = "Agbo-TDD-Wallet.app"
-               BlueprintName = "Agbo-TDD-Wallet"
-               ReferencedContainer = "container:Agbo-TDD-Wallet.xcodeproj">
+               BuildableName = "AgboTDDWallet.app"
+               BlueprintName = "AgboTDDWallet"
+               ReferencedContainer = "container:AgboTDDWallet.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EA5AF9B21F38D59500FFC125"
-               BuildableName = "Agbo-TDD-WalletTests.xctest"
-               BlueprintName = "Agbo-TDD-WalletTests"
-               ReferencedContainer = "container:Agbo-TDD-Wallet.xcodeproj">
+               BuildableName = "AgboTDDWalletTests.xctest"
+               BlueprintName = "AgboTDDWalletTests"
+               ReferencedContainer = "container:AgboTDDWallet.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EA5AF99E1F38D59500FFC125"
-            BuildableName = "Agbo-TDD-Wallet.app"
-            BlueprintName = "Agbo-TDD-Wallet"
-            ReferencedContainer = "container:Agbo-TDD-Wallet.xcodeproj">
+            BuildableName = "AgboTDDWallet.app"
+            BlueprintName = "AgboTDDWallet"
+            ReferencedContainer = "container:AgboTDDWallet.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -68,9 +68,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EA5AF99E1F38D59500FFC125"
-            BuildableName = "Agbo-TDD-Wallet.app"
-            BlueprintName = "Agbo-TDD-Wallet"
-            ReferencedContainer = "container:Agbo-TDD-Wallet.xcodeproj">
+            BuildableName = "AgboTDDWallet.app"
+            BlueprintName = "AgboTDDWallet"
+            ReferencedContainer = "container:AgboTDDWallet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -87,9 +87,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EA5AF99E1F38D59500FFC125"
-            BuildableName = "Agbo-TDD-Wallet.app"
-            BlueprintName = "Agbo-TDD-Wallet"
-            ReferencedContainer = "container:Agbo-TDD-Wallet.xcodeproj">
+            BuildableName = "AgboTDDWallet.app"
+            BlueprintName = "AgboTDDWallet"
+            ReferencedContainer = "container:AgboTDDWallet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

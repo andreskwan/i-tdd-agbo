@@ -7,29 +7,18 @@
 //
 
 import XCTest
+@testable import AgboTDDWallet
 
 class EuroTest: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testMultiplyAmount() {
+        //how do I know if I need a protocol?
+        //because you will need to understand and model your project
+        
+        //xcode should suggest me to create this class for me.
+        var euro = Euro(withAmount:2)
+        euro.multiplyAmount(by:5)
+        
+        XCTAssertEqual(euro.amount, 10)
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
