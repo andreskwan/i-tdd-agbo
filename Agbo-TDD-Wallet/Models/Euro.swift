@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Euro {
+struct AKEuro {
     private var amount : Double
     init(withAmount initialAmount:Double) {
         amount = initialAmount
@@ -19,8 +19,8 @@ struct Euro {
     }
 }
 
-extension Euro: Equatable {
-    static func ==(lhs: Euro, rhs: Euro) -> Bool {
+extension AKEuro: Equatable {
+    static func ==(lhs: AKEuro, rhs: AKEuro) -> Bool {
         return lhs.amount == rhs.amount ? true : false
     }
 }

@@ -13,8 +13,10 @@
 		EA5AF9AA1F38D59500FFC125 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5AF9A91F38D59500FFC125 /* Assets.xcassets */; };
 		EA5AF9AD1F38D59500FFC125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5AF9AB1F38D59500FFC125 /* LaunchScreen.storyboard */; };
 		EA5AF9D21F38DA3E00FFC125 /* EuroTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AF9D11F38DA3E00FFC125 /* EuroTest.swift */; };
-		EA802CDD1F38E0FB00544553 /* Euro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA802CDC1F38E0FB00544553 /* Euro.swift */; };
-		EA802CDE1F3928DD00544553 /* Euro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA802CDC1F38E0FB00544553 /* Euro.swift */; };
+		EA802CDD1F38E0FB00544553 /* AKEuro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA802CDC1F38E0FB00544553 /* AKEuro.swift */; };
+		EA802CDE1F3928DD00544553 /* AKEuro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA802CDC1F38E0FB00544553 /* AKEuro.swift */; };
+		EA9A19DD1F3960B50056263F /* DollarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9A19DC1F3960B50056263F /* DollarTest.swift */; };
+		EA9A19DF1F39615E0056263F /* AKDollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9A19DE1F39615E0056263F /* AKDollar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,9 @@
 		EA5AF9B31F38D59500FFC125 /* AgboTDDWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgboTDDWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5AF9B91F38D59500FFC125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA5AF9D11F38DA3E00FFC125 /* EuroTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuroTest.swift; sourceTree = "<group>"; };
-		EA802CDC1F38E0FB00544553 /* Euro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Euro.swift; sourceTree = "<group>"; };
+		EA802CDC1F38E0FB00544553 /* AKEuro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKEuro.swift; sourceTree = "<group>"; };
+		EA9A19DC1F3960B50056263F /* DollarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarTest.swift; sourceTree = "<group>"; };
+		EA9A19DE1F39615E0056263F /* AKDollar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKDollar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		EA5AF9D01F38DA2000FFC125 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EA9A19DC1F3960B50056263F /* DollarTest.swift */,
 				EA5AF9D11F38DA3E00FFC125 /* EuroTest.swift */,
 			);
 			path = Models;
@@ -111,7 +116,8 @@
 		EA802CDB1F38E0E700544553 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EA802CDC1F38E0FB00544553 /* Euro.swift */,
+				EA802CDC1F38E0FB00544553 /* AKEuro.swift */,
+				EA9A19DE1F39615E0056263F /* AKDollar.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,7 +225,8 @@
 			files = (
 				EA5AF9A51F38D59500FFC125 /* ViewController.swift in Sources */,
 				EA5AF9A31F38D59500FFC125 /* AppDelegate.swift in Sources */,
-				EA802CDD1F38E0FB00544553 /* Euro.swift in Sources */,
+				EA802CDD1F38E0FB00544553 /* AKEuro.swift in Sources */,
+				EA9A19DF1F39615E0056263F /* AKDollar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,8 +234,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA802CDE1F3928DD00544553 /* Euro.swift in Sources */,
+				EA802CDE1F3928DD00544553 /* AKEuro.swift in Sources */,
 				EA5AF9D21F38DA3E00FFC125 /* EuroTest.swift in Sources */,
+				EA9A19DD1F3960B50056263F /* DollarTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
