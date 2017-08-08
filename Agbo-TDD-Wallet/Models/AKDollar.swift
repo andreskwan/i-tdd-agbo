@@ -8,20 +8,9 @@
 
 import Foundation
 
-struct AKDollar {
-    private var amount : Double
+struct AKDollar:AKCurrency {
+    internal var amount : Double
     init(withAmount initialAmount:Double) {
         amount = initialAmount
     }
-    
-    mutating func multiplyAmount(by times:Int) {
-        self.amount *= Double(times)
-    }
 }
-
-extension AKDollar: Equatable {
-    static func ==(lhs: AKDollar, rhs: AKDollar) -> Bool {
-        return lhs.amount == rhs.amount ? true : false
-    }
-}
-

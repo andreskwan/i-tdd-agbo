@@ -16,6 +16,8 @@
 		EA802CDD1F38E0FB00544553 /* AKEuro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA802CDC1F38E0FB00544553 /* AKEuro.swift */; };
 		EA802CDE1F3928DD00544553 /* AKEuro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA802CDC1F38E0FB00544553 /* AKEuro.swift */; };
 		EA8B47D81F396742006525AC /* AKCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8B47D71F396742006525AC /* AKCurrency.swift */; };
+		EA8B47D91F396F03006525AC /* AKDollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9A19DE1F39615E0056263F /* AKDollar.swift */; };
+		EA8B47DA1F396F08006525AC /* AKCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8B47D71F396742006525AC /* AKCurrency.swift */; };
 		EA9A19DD1F3960B50056263F /* DollarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9A19DC1F3960B50056263F /* DollarTest.swift */; };
 		EA9A19DF1F39615E0056263F /* AKDollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9A19DE1F39615E0056263F /* AKDollar.swift */; };
 /* End PBXBuildFile section */
@@ -241,6 +243,8 @@
 				EA802CDE1F3928DD00544553 /* AKEuro.swift in Sources */,
 				EA5AF9D21F38DA3E00FFC125 /* EuroTest.swift in Sources */,
 				EA9A19DD1F3960B50056263F /* DollarTest.swift in Sources */,
+				EA8B47D91F396F03006525AC /* AKDollar.swift in Sources */,
+				EA8B47DA1F396F08006525AC /* AKCurrency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
