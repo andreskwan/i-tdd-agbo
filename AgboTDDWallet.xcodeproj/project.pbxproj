@@ -15,6 +15,7 @@
 		EA5AF9D21F38DA3E00FFC125 /* EuroTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AF9D11F38DA3E00FFC125 /* EuroTest.swift */; };
 		EA802CDD1F38E0FB00544553 /* AKEuro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA802CDC1F38E0FB00544553 /* AKEuro.swift */; };
 		EA802CDE1F3928DD00544553 /* AKEuro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA802CDC1F38E0FB00544553 /* AKEuro.swift */; };
+		EA8B47D81F396742006525AC /* AKCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8B47D71F396742006525AC /* AKCurrency.swift */; };
 		EA9A19DD1F3960B50056263F /* DollarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9A19DC1F3960B50056263F /* DollarTest.swift */; };
 		EA9A19DF1F39615E0056263F /* AKDollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9A19DE1F39615E0056263F /* AKDollar.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		EA5AF9B91F38D59500FFC125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA5AF9D11F38DA3E00FFC125 /* EuroTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuroTest.swift; sourceTree = "<group>"; };
 		EA802CDC1F38E0FB00544553 /* AKEuro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKEuro.swift; sourceTree = "<group>"; };
+		EA8B47D71F396742006525AC /* AKCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKCurrency.swift; sourceTree = "<group>"; };
 		EA9A19DC1F3960B50056263F /* DollarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarTest.swift; sourceTree = "<group>"; };
 		EA9A19DE1F39615E0056263F /* AKDollar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKDollar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 			children = (
 				EA802CDC1F38E0FB00544553 /* AKEuro.swift */,
 				EA9A19DE1F39615E0056263F /* AKDollar.swift */,
+				EA8B47D71F396742006525AC /* AKCurrency.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				EA5AF9A31F38D59500FFC125 /* AppDelegate.swift in Sources */,
 				EA802CDD1F38E0FB00544553 /* AKEuro.swift in Sources */,
 				EA9A19DF1F39615E0056263F /* AKDollar.swift in Sources */,
+				EA8B47D81F396742006525AC /* AKCurrency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
