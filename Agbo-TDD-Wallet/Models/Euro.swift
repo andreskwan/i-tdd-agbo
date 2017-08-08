@@ -9,7 +9,7 @@
 import Foundation
 
 struct Euro {
-    private(set) var amount : Double
+    private var amount : Double
     init(withAmount initialAmount:Double) {
         amount = initialAmount
     }
