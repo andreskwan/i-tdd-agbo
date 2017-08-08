@@ -12,7 +12,7 @@ import Foundation
 protocol AKCurrency: Equatable {
     var amount : Double {get set}
     init(withAmount initialAmount:Double)
-    mutating func multiplyAmount(by times:Double)
+    mutating func multiply(by times:Double)
 }
 
 extension AKCurrency {
@@ -22,7 +22,7 @@ extension AKCurrency {
 }
 
 extension AKCurrency {
-    mutating func multiplyAmount(by times:Double) {
+    mutating func multiply(by times:Double) {
         self.amount *= Double(times)
     }
 }

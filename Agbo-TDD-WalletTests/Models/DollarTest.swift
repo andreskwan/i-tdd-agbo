@@ -18,7 +18,7 @@ class DollarTest: XCTestCase {
         //xcode should suggest me to create this class for me.
         var dollarRightPocket = AKDollar(withAmount:5)
         let tenDollars = AKDollar(withAmount:10)
-        dollarRightPocket.multiplyAmount(by: 2)
+        dollarRightPocket.multiply(by: 2)
         
         XCTAssertEqual(dollarRightPocket, tenDollars)
     }
@@ -26,8 +26,11 @@ class DollarTest: XCTestCase {
     func testEquality() {
         let dollarLeftPocket = AKDollar(withAmount:10)
         let tenDollars = AKDollar(withAmount:10)
-        
+        //test True
         XCTAssertEqual(dollarLeftPocket, tenDollars)
+     
+        //test False
+        let twentyDollars = AKDollar(withAmount: 20)
+        XCTAssertFalse(twentyDollars == tenDollars)
     }
-    
 }
