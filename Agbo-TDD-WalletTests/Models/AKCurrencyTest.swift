@@ -17,4 +17,10 @@ class AKCurrencyTest: XCTestCase {
         let fiveDollars = AKMoney(withAmount:5, currency:"USD")
         XCTAssertEqual("USD", fiveDollars.currency)
     }
+    
+    func testDifferentCurrencies(){
+        let fiveEuros = AKMoney(withAmount:5, currency:"EUR")
+        let fiveDollars = AKMoney(withAmount:5, currency:"USD")
+        XCTAssertNotEqual(fiveDollars, fiveEuros)
+    }
 }

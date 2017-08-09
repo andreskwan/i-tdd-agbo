@@ -22,7 +22,9 @@ extension AKCurrency {
         return amount.hashValue
     }
     static func ==(lhs: Self, rhs: Self) -> Bool {
-        return lhs.amount == rhs.amount ? true : false
+        let isEqualAmount = lhs.amount == rhs.amount ? true : false
+        let isEqualCurrency = lhs.currency == rhs.currency ? true : false
+        return isEqualAmount && isEqualCurrency ? true : false
     }
 }
 //MARK: Default Methods
