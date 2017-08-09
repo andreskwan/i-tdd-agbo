@@ -11,6 +11,7 @@ import Foundation
 //AKCurrency Generic Constrain - Homogenety
 protocol AKCurrency: Hashable {
     var amount : Double {get set}
+    var currency : String {get set}
     init()
     mutating func multiply(by times:Double)
 }
@@ -43,9 +44,11 @@ extension AKCurrency {
     init(euroWith initialAmount:Double){
         self.init()
         self.amount = initialAmount
+        self.currency = "EUR"
     }
     init(dollarWith initialAmount:Double){
         self.init()
         self.amount = initialAmount
+        self.currency = "USD"
     }
 }

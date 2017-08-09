@@ -10,18 +10,10 @@ import XCTest
 @testable import AgboTDDWallet
 
 class AKCurrencyTest: XCTestCase {
-    var money: AKMoney?
-    override func setUp() {
-        super.setUp()
-        money = AKMoney()
-    }
     
-    override func tearDown() {
-        super.tearDown()
-        money = nil
+self.currency = "EUR"        let fiveEuros = AKMoney(euroWith: 5)
+        XCTAssertEqual("EUR", fiveEuros.currency)
+        let fiveDollars = AKMoney(dollarWith: 5)
+        XCTAssertEqual("USD", fiveDollars.currency)
     }
-    
-//    func testCurrencies() {
-//        XCTAssertEqual("EUR", <#T##expression2: [Equatable]##[Equatable]#>)
-//    }
 }

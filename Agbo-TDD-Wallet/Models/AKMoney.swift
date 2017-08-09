@@ -10,7 +10,9 @@ import Foundation
 
 struct AKMoney: AKCurrency {
     var amount: Double
+    var currency: String
     init() {
         amount = 0
+        currency = ""
     }
 }
