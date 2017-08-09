@@ -36,6 +36,13 @@ class DollarTest: XCTestCase {
     
     func testDescription() {
         let tenDollars = AKDollar(withAmount:10)
-        XCTAssertEqual(tenDollars.description(), "AKDollar")
+        XCTAssertEqual(tenDollars.description(), "Name: AKDollar\nAmount: 10.0")
+    }
+    
+    func testHash() {
+        let dollarRightPocket = AKDollar(withAmount:10)
+        let dollarLeftPocket = AKDollar(withAmount:10)
+        
+        XCTAssertEqual(dollarLeftPocket.hashValue, dollarRightPocket.hashValue)
     }
 }

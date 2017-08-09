@@ -36,6 +36,13 @@ class EuroTest: XCTestCase {
     
     func testDescription() {
         let tenEuros = AKEuro(withAmount:10)
-        XCTAssertEqual(tenEuros.description(), "AKEuro")
+        XCTAssertEqual(tenEuros.description(), "Name: AKEuro\nAmount: 10.0")
+    }
+    
+    func testHash() {
+        let euroRightPocket = AKEuro(withAmount:10)
+        let euroLeftPocket = AKEuro(withAmount:10)
+        
+        XCTAssertEqual(euroLeftPocket.hashValue, euroRightPocket.hashValue)
     }
 }
