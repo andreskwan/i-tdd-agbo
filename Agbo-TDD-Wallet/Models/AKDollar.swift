@@ -9,8 +9,8 @@
 import Foundation
 
 struct AKDollar:AKCurrency {
-    internal var amount : Double
-    init(withAmount initialAmount:Double) {
-        amount = initialAmount
+    var amount: Double
+    init() {
+        amount = 0.0
     }
 }
