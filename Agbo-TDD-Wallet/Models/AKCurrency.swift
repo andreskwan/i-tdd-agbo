@@ -25,4 +25,8 @@ extension AKCurrency {
     mutating func multiply(by times:Double) {
         self.amount *= Double(times)
     }
+    
+    func description() -> String {
+        return "\(type(of:self))"
+    }
 }

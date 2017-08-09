@@ -33,4 +33,9 @@ class DollarTest: XCTestCase {
         let twentyDollars = AKDollar(withAmount: 20)
         XCTAssertFalse(twentyDollars == tenDollars)
     }
+    
+    func testDescription() {
+        let tenDollars = AKDollar(withAmount:10)
+        XCTAssertEqual(tenDollars.description(), "AKDollar")
+    }
 }

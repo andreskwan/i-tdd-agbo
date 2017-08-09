@@ -32,6 +32,10 @@ class EuroTest: XCTestCase {
         //test False
         let twentyEuros = AKEuro(withAmount: 20)
         XCTAssertFalse(twentyEuros == tenEuros)
-        
+    }
+    
+    func testDescription() {
+        let tenEuros = AKEuro(withAmount:10)
+        XCTAssertEqual(tenEuros.description(), "AKEuro")
     }
 }
