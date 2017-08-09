@@ -14,7 +14,7 @@ protocol AKCurrency: Hashable {
     init()
     mutating func multiply(by times:Double)
 }
-
+//MARK: Hashable
 extension AKCurrency {
     var hashValue: Int {
         //it is the same if we are comparing a Dollar with an Euro!!!
@@ -24,7 +24,7 @@ extension AKCurrency {
         return lhs.amount == rhs.amount ? true : false
     }
 }
-
+//MARK: Default Methods
 extension AKCurrency {
     mutating func multiply(by times:Double) {
         self.amount *= Double(times)
@@ -33,8 +33,18 @@ extension AKCurrency {
     func description() -> String {
         return "Name: \(type(of:self))\nAmount: \(self.amount)"
     }
-    
+}
+//MARK: Initializers
+extension AKCurrency {
     init(withAmount initialAmount:Double) {
+        self.init()
+        self.amount = initialAmount
+    }
+    init(euroWith initialAmount:Double){
+        self.init()
+        self.amount = initialAmount
+    }
+    init(dollarWith initialAmount:Double){
         self.init()
         self.amount = initialAmount
     }

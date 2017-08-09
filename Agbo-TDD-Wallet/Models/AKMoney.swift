@@ -1,16 +1,16 @@
 //
-//  Euro.swift
-//  Agbo-TDD-Wallet
+//  AKMoney.swift
+//  AgboTDDWallet
 //
-//  Created by Andres Kwan on 8/7/17.
+//  Created by Andres Kwan on 8/9/17.
 //  Copyright © 2017 Andres Kwan. All rights reserved.
 //
 
 import Foundation
 
-struct AKDollar:AKCurrency {
+struct AKMoney: AKCurrency {
     var amount: Double
     init() {
-        amount = 0.0
+        amount = 0
     }
 }
