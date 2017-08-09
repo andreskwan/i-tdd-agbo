@@ -37,18 +37,9 @@ extension AKCurrency {
 }
 //MARK: Initializers
 extension AKCurrency {
-    init(withAmount initialAmount:Double) {
+    init(withAmount initialAmount:Double, currency:String) {
         self.init()
         self.amount = initialAmount
-    }
-    init(euroWith initialAmount:Double){
-        self.init()
-        self.amount = initialAmount
-        self.currency = "EUR"
-    }
-    init(dollarWith initialAmount:Double){
-        self.init()
-        self.amount = initialAmount
-        self.currency = "USD"
+        self.currency = currency
     }
 }

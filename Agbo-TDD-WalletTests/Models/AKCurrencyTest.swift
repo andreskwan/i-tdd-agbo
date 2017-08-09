@@ -11,9 +11,10 @@ import XCTest
 
 class AKCurrencyTest: XCTestCase {
     
-self.currency = "EUR"        let fiveEuros = AKMoney(euroWith: 5)
+    func testCurrency(){
+        let fiveEuros = AKMoney(withAmount:5, currency:"EUR")
         XCTAssertEqual("EUR", fiveEuros.currency)
-        let fiveDollars = AKMoney(dollarWith: 5)
+        let fiveDollars = AKMoney(withAmount:5, currency:"USD")
         XCTAssertEqual("USD", fiveDollars.currency)
     }
 }

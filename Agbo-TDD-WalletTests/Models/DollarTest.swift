@@ -16,32 +16,32 @@ class DollarTest: XCTestCase {
         //because you will need to understand and model your project
         
         //xcode should suggest me to create this class for me.
-        var dollarRightPocket = AKMoney(dollarWith:5)
-        let tenDollars = AKMoney(dollarWith:10)
+        var dollarRightPocket = AKMoney(withAmount:5, currency:"USD")
+        let tenDollars = AKMoney(withAmount:10, currency:"USD")
         dollarRightPocket.multiply(by: 2)
         
         XCTAssertEqual(dollarRightPocket, tenDollars)
     }
     
     func testEquality() {
-        let dollarLeftPocket = AKMoney(dollarWith:10)
-        let tenDollars = AKMoney(dollarWith:10)
+        let dollarLeftPocket = AKMoney(withAmount:10, currency:"USD")
+        let tenDollars = AKMoney(withAmount:10, currency:"USD")
         //test True
         XCTAssertEqual(dollarLeftPocket, tenDollars)
      
         //test False
-        let twentyDollars = AKMoney(dollarWith: 20)
+        let twentyDollars = AKMoney(withAmount:20, currency:"USD")
         XCTAssertFalse(twentyDollars == tenDollars)
     }
     
     func testDescription() {
-        let tenDollars = AKMoney(dollarWith:10)
+        let tenDollars = AKMoney(withAmount:10, currency:"USD")
         XCTAssertEqual(tenDollars.description(), "Name: AKMoney\nAmount: 10.0")
     }
     
     func testHash() {
-        let dollarRightPocket = AKMoney(dollarWith:10)
-        let dollarLeftPocket = AKMoney(dollarWith:10)
+        let dollarRightPocket = AKMoney(withAmount:10, currency:"USD")
+        let dollarLeftPocket = AKMoney(withAmount:10, currency:"USD")
         
         XCTAssertEqual(dollarLeftPocket.hashValue, dollarRightPocket.hashValue)
     }

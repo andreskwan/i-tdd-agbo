@@ -16,40 +16,38 @@ class EuroTest: XCTestCase {
         //because you will need to understand and model your project
         
         //xcode should suggest me to create this class for me.
-        var euroRightPocket = AKMoney(euroWith:5)
-        let tenEuros = AKMoney(euroWith:10)
+        var euroRightPocket = AKMoney(withAmount:5, currency:"EUR")
+        let tenEuros = AKMoney(withAmount:10, currency:"EUR")
         euroRightPocket.multiply(by: 2)
         
         XCTAssertEqual(euroRightPocket, tenEuros)
     }
     
     func testEquality() {
-        let euroLeftPocket = AKMoney(euroWith:10)
-        let tenEuros = AKMoney(euroWith:10)
+        let euroLeftPocket = AKMoney(withAmount:10, currency:"EUR")
+        let tenEuros = AKMoney(withAmount:10, currency:"EUR")
         //test True
         XCTAssertEqual(euroLeftPocket, tenEuros)
         
         //test False
-        let twentyEuros = AKMoney(euroWith: 20)
+        let twentyEuros = AKMoney(withAmount:20, currency:"EUR")
         XCTAssertFalse(twentyEuros == tenEuros)
     }
     
     func testDescription() {
-        let tenEuros = AKMoney(euroWith:10)
+        let tenEuros = AKMoney(withAmount:10, currency:"EUR")
         XCTAssertEqual(tenEuros.description(), "Name: AKMoney\nAmount: 10.0")
     }
     
     func testHash() {
-        let euroRightPocket = AKMoney(euroWith:10)
-        let euroLeftPocket = AKMoney(euroWith:10)
+        let euroRightPocket = AKMoney(withAmount:10, currency:"EUR")
+        let euroLeftPocket = AKMoney(withAmount:10, currency:"EUR")
         
         XCTAssertEqual(euroLeftPocket.hashValue, euroRightPocket.hashValue)
     }
     
     func testAmountStorage() {
-        let twentyEuros = AKMoney(euroWith: 20)
+        let twentyEuros = AKMoney(withAmount:20, currency:"EUR")
         XCTAssertEqual(20, twentyEuros.amount)
     }
-    
-    
 }
