@@ -33,6 +33,16 @@ extension AKCurrency {
         self.amount *= Double(times)
     }
     
+//    func plus(money:Self) -> Self {
+//        //should sheck if are the same currency
+//        if self.currency == money.currency {
+//            let total = self.amount + money.amount
+//            return Self(withAmout:total, currency: self.currency)
+//        }
+//        //should throw an exception if currencies are different
+//        return self
+//    }
+    
     func description() -> String {
         return "Name: \(type(of:self))\nAmount: \(self.amount)"
     }

@@ -15,4 +15,14 @@ struct AKMoney: AKCurrency {
         amount = 0
         currency = ""
     }
+    
+    func plus(money:AKMoney) -> AKMoney {
+        //should sheck if are the same currency
+        if self.currency == money.currency {
+            let total = self.amount + money.amount
+            return AKMoney(withAmount: total, currency: self.currency)
+        }
+        //should throw an exception if currencies are different
+        return self
+    }
 }
