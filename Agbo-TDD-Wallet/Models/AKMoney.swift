@@ -16,10 +16,10 @@ struct AKMoney: AKCurrency {
         currency = ""
     }
     
-    func plus(money:AKMoney) -> AKMoney {
+    func plus(other:AKMoney) -> AKMoney {
         //should sheck if are the same currency
-        if self.currency == money.currency {
-            let total = self.amount + money.amount
+        if self.currency == other.currency {
+            let total = self.amount + other.amount
             return AKMoney(withAmount: total, currency: self.currency)
         }
         //should throw an exception if currencies are different
