@@ -26,9 +26,15 @@ class AKBrokerTest: XCTestCase {
     }
     
     func testConvertionWithSameCurrency() {
-        let total = broker.conver(money:fiveDollars,
-                                  toCurrency:"USD")
-        XCTAssertEqual(total, fiveDollars)
+        let fiveConvertedDollars = try! broker.conver(money:fiveDollars,
+                                                      toCurrency:"USD")
+        XCTAssertEqual(fiveConvertedDollars, fiveDollars)
+    }
+    
+    func testThatNoRateRaisesException() {
+        //no rates
+        XCTAssertThrowsError(try broker.conver(money:fiveDollars,
+                                               toCurrency:"EUR"))
     }
     
     func testConversionWithDifferentCurrencies() {
@@ -36,15 +42,16 @@ class AKBrokerTest: XCTestCase {
                              fromCurrency: "USD",
                              toCurrency: "EUR")
         let tenDollars = fiveDollars.multiply(by: 2)
-        let fiveConvertedEuros = broker.conver(money:tenDollars,
+        let fiveConvertedEuros = try! broker.conver(money:tenDollars,
                                                toCurrency:"EUR")
         XCTAssertEqual(fiveConvertedEuros, fiveEuros)
+        
+        let tenConvertedDollars = try! broker.conver(money:fiveEuros,
+                                                    toCurrency:"USD")
+        XCTAssertEqual(tenConvertedDollars, tenDollars)
     }
     
-    func testThatNoRateRaisesException() {
-        XCTAssertThrowsError(broker.conver(money:fiveDollars,
-                                           toCurrency:"EUR"))
-    }
+    
     
     /*
      testNonValidConversion
