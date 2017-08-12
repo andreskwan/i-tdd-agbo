@@ -10,34 +10,43 @@ import XCTest
 @testable import AgboTDDWallet
 
 class AKBrokerTest: XCTestCase {
+    var broker = AKBroker()
+    var fiveDollars = AKMoney()
+    var fiveEuros = AKMoney()
     
-    func testSimpleCurencyConvertion() {
-        let broker = AKBroker()
-        let fiveDollars = AKMoney(withAmount: 5, currency: "USD")
-
-        let total = broker.conver(money:fiveDollars, toCurrency:"USD")
-        XCTAssertEqual(total, fiveDollars)
-        
+    override func setUp() {
+        super.setUp()
+        broker = AKBroker ()
+        fiveDollars = AKMoney(withAmount: 5, currency: "USD")
+        fiveEuros = AKMoney(withAmount: 5, currency: "EUR")
     }
     
-    func testConversionBetweenCurrencies() {
-        var broker = AKBroker()
-        let tenDollars = AKMoney(withAmount: 10, currency: "USD")
-        let fiveEuros = AKMoney(withAmount: 5, currency: "EUR")
-        
+    override func tearDown() {
+        super.tearDown()
+    }
+    
+    func testConvertionWithSameCurrency() {
+        let total = broker.conver(money:fiveDollars,
+                                  toCurrency:"USD")
+        XCTAssertEqual(total, fiveDollars)
+    }
+    
+    func testConversionWithDifferentCurrencies() {
         broker.addConversion(rate: 2,
                              fromCurrency: "USD",
                              toCurrency: "EUR")
-        
-        let total = broker.conver(money:tenDollars,
-                                  toCurrency:"EUR")
-        XCTAssertEqual(total, fiveEuros)
+        let tenDollars = fiveDollars.multiply(by: 2)
+        let fiveConvertedEuros = broker.conver(money:tenDollars,
+                                               toCurrency:"EUR")
+        XCTAssertEqual(fiveConvertedEuros, fiveEuros)
+    }
+    
+    func testThatNoRateRaisesException() {
+        XCTAssertThrowsError(broker.conver(money:fiveDollars,
+                                           toCurrency:"EUR"))
     }
     
     /*
-     
-     
-     
      testNonValidConversion
      - currency
      */

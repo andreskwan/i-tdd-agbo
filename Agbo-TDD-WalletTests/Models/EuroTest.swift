@@ -16,11 +16,10 @@ class EuroTest: XCTestCase {
         //because you will need to understand and model your project
         
         //xcode should suggest me to create this class for me.
-        var euroRightPocket = AKMoney(withAmount:5, currency:"EUR")
+        let euroRightPocket = AKMoney(withAmount:5, currency:"EUR")
         let tenEuros = AKMoney(withAmount:10, currency:"EUR")
-        euroRightPocket.multiply(by: 2)
         
-        XCTAssertEqual(euroRightPocket, tenEuros)
+        XCTAssertEqual(euroRightPocket.multiply(by: 2), tenEuros)
     }
     
     func testEquality() {

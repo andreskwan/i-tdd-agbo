@@ -10,22 +10,26 @@ import XCTest
 @testable import AgboTDDWallet
 
 class DollarTest: XCTestCase {
+    var fiveDollars = AKMoney()
+    var tenDollars = AKMoney()
+    
+    override func setUp() {
+        super.setUp()
+        fiveDollars = AKMoney(withAmount:5, currency:"USD")
+        tenDollars = AKMoney(withAmount:10, currency:"USD")
+    }
     
     func testMultiplyAmount() {
         //how do I know if I need a protocol?
         //because you will need to understand and model your project
         
         //xcode should suggest me to create this class for me.
-        var dollarRightPocket = AKMoney(withAmount:5, currency:"USD")
-        let tenDollars = AKMoney(withAmount:10, currency:"USD")
-        dollarRightPocket.multiply(by: 2)
         
-        XCTAssertEqual(dollarRightPocket, tenDollars)
+        XCTAssertEqual(fiveDollars.multiply(by: 2), tenDollars)
     }
     
     func testEquality() {
         let dollarLeftPocket = AKMoney(withAmount:10, currency:"USD")
-        let tenDollars = AKMoney(withAmount:10, currency:"USD")
         //test True
         XCTAssertEqual(dollarLeftPocket, tenDollars)
      
@@ -35,15 +39,12 @@ class DollarTest: XCTestCase {
     }
     
     func testDescription() {
-        let tenDollars = AKMoney(withAmount:10, currency:"USD")
         let description = "<AKMoney>\nUSD-10.0"
         XCTAssertEqual(tenDollars.description(), description)
     }
     
-    func testHash() {
-        let dollarRightPocket = AKMoney(withAmount:10, currency:"USD")
-        let dollarLeftPocket = AKMoney(withAmount:10, currency:"USD")
-        
-        XCTAssertEqual(dollarLeftPocket.hashValue, dollarRightPocket.hashValue)
+    func testHashEquality() {
+        XCTAssertEqual(fiveDollars.multiply(by: 2).hashValue,
+                       tenDollars.hashValue)
     }
 }
