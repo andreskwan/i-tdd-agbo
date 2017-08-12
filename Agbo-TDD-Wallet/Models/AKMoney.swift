@@ -23,6 +23,13 @@ struct AKMoney: AKCurrency {
             return AKMoney(withAmount: total, currency: self.currency)
         }
         //should throw an exception if currencies are different
+        //or should identify currencies rates and convert?
+        //not this is the responsability of a AKBrocker
         return self
+    }
+    
+    func multiply(by times:Double) -> AKMoney {
+        let amount = self.amount * Double(times)
+        return AKMoney(withAmount: amount, currency: self.currency)
     }
 }
