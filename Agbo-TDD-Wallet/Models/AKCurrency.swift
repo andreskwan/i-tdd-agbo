@@ -27,7 +27,7 @@ extension AKCurrency {
         return isEqualAmount && isEqualCurrency ? true : false
     }
 }
-//MARK: Default Methods
+//MARK: Default Behavior-Methods
 extension AKCurrency {
     mutating func multiply(by times:Double) {
         self.amount *= Double(times)
@@ -44,7 +44,7 @@ extension AKCurrency {
 //    }
     
     func description() -> String {
-        return "Name: \(type(of:self))\nAmount: \(self.amount)"
+        return "<\(type(of:self))>\n\(self.currency)-\(self.amount)"
     }
 }
 //MARK: Initializers

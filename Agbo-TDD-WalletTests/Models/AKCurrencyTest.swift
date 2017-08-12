@@ -38,4 +38,10 @@ class AKCurrencyTest: XCTestCase {
         let tenDollars = AKMoney(withAmount:10, currency:"USD")
         XCTAssertNotEqual(fiveEuros.plus(other: tenDollars), fifteenEuros, "€5 + $10 != is not valid yet")
     }
+
+    func testDescription() {
+        let fifteenEuros = AKMoney(withAmount:15, currency:"EUR")
+        let description = "<AKMoney>\nEUR-15.0"
+        XCTAssertEqual(fifteenEuros.description(), description)
+    }
 }

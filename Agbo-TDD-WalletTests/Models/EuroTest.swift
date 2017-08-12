@@ -36,7 +36,8 @@ class EuroTest: XCTestCase {
     
     func testDescription() {
         let tenEuros = AKMoney(withAmount:10, currency:"EUR")
-        XCTAssertEqual(tenEuros.description(), "Name: AKMoney\nAmount: 10.0")
+        let description = "<AKMoney>\nEUR-10.0"
+        XCTAssertEqual(tenEuros.description(), description)
     }
     
     func testHash() {

@@ -21,17 +21,21 @@ class AKBrokerTest: XCTestCase {
     }
     
     func testConversionBetweenCurrencies() {
-        let broker = AKBroker()
+        var broker = AKBroker()
         let tenDollars = AKMoney(withAmount: 10, currency: "USD")
         let fiveEuros = AKMoney(withAmount: 5, currency: "EUR")
         
-        broker.addConversion(rate:2, fromCurency:"USD", toCurrency:"EUR")
-        let total = broker.conver(money:tenDollars, toCurrency:"EUR")
+        broker.addConversion(rate: 2,
+                             fromCurrency: "USD",
+                             toCurrency: "EUR")
+        
+        let total = broker.conver(money:tenDollars,
+                                  toCurrency:"EUR")
         XCTAssertEqual(total, fiveEuros)
     }
     
     /*
-     var rates:[String:Int]
+     
      
      
      testNonValidConversion
