@@ -10,10 +10,13 @@ import Foundation
 
 //AKCurrency Generic Constrain - Homogenety
 protocol AKCurrency: Hashable {
+    //how to encapsulate properties in structs
     var amount : Double {get set}
     var currency : String {get set}
+    
     init()
-    mutating func multiply(by times:Double)
+    func multiply(by times:Double) -> Self
+    func plus(other:Self) -> Self
 }
 //MARK: Hashable
 extension AKCurrency {
@@ -29,15 +32,17 @@ extension AKCurrency {
 }
 //MARK: Default Behavior-Methods
 extension AKCurrency {
-    mutating func multiply(by times:Double) {
-        self.amount *= Double(times)
-    }
+//    func multiply(by times:Double) -> Self {
+//        self.amount *= Double(times)
+//        return self
+//    }
     
 //    func plus(money:Self) -> Self {
 //        //should sheck if are the same currency
 //        if self.currency == money.currency {
 //            let total = self.amount + money.amount
-//            return Self(withAmout:total, currency: self.currency)
+//            let valor = init(withAmout:total, currency: self.currency)
+//            return valor
 //        }
 //        //should throw an exception if currencies are different
 //        return self
