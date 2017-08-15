@@ -17,8 +17,8 @@ enum AKBrokerErrors : Error {
 struct AKBroker {
     var rates:[String:Double] = [:]
     
-    func conver(money:AKMoney,
-                toCurrency:String) throws -> AKMoney
+    func conver<T:AKCurrency>(money:T,
+                              toCurrency:String) throws -> T
     {
         if money.currency != toCurrency {
             let rateConversionKey = key(from: money.currency,
@@ -27,8 +27,8 @@ struct AKBroker {
                 throw AKBrokerErrors.NoConversionRateException
             }
             let newAmount = money.amount/rate
-            return AKMoney(withAmount: newAmount,
-                           currency: toCurrency)
+            return T(withAmount: newAmount,
+                     currency: toCurrency)
         }
         return money
     }

@@ -13,45 +13,46 @@ class AKBrokerTest: XCTestCase {
     var broker = AKBroker()
     var fiveDollars = AKMoney()
     var fiveEuros = AKMoney()
+    var tenDollars = AKMoney()
     
     override func setUp() {
         super.setUp()
         broker = AKBroker ()
         fiveDollars = AKMoney(withAmount: 5, currency: "USD")
         fiveEuros = AKMoney(withAmount: 5, currency: "EUR")
+        tenDollars = AKMoney(withAmount: 10, currency: "USD")
     }
     
     override func tearDown() {
         super.tearDown()
     }
     
-    func testConvertionWithSameCurrency() {
+    func testConvertionWithSameCurrencies() {
         let fiveConvertedDollars = try! broker.conver(money:fiveDollars,
                                                       toCurrency:"USD")
         XCTAssertEqual(fiveConvertedDollars, fiveDollars)
     }
     
-    func testThatNoRateRaisesException() {
-        //no rates
-        XCTAssertThrowsError(try broker.conver(money:fiveDollars,
-                                               toCurrency:"EUR"))
-    }
-    
-    func testConversionWithDifferentCurrencies() {
+    func testConvertionWithDifferentCurrencies() {
         broker.addConversion(rate: 2,
                              fromCurrency: "USD",
                              toCurrency: "EUR")
-        let tenDollars = fiveDollars.multiply(by: 2)
+        /// $10 to EUR
         let fiveConvertedEuros = try! broker.conver(money:tenDollars,
-                                               toCurrency:"EUR")
+                                                    toCurrency:"EUR")
         XCTAssertEqual(fiveConvertedEuros, fiveEuros)
         
+        /// €5 to USD
         let tenConvertedDollars = try! broker.conver(money:fiveEuros,
                                                     toCurrency:"USD")
         XCTAssertEqual(tenConvertedDollars, tenDollars)
     }
     
-    
+    func testThatNoRateRaisesException() {
+        /// no rates
+        XCTAssertThrowsError(try broker.conver(money:fiveDollars,
+                                               toCurrency:"EUR"))
+    }
     
     /*
      testNonValidConversion
