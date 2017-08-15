@@ -13,10 +13,11 @@ protocol AKCurrency: Hashable {
     //how to encapsulate properties in structs
     var amount : Double {get set}
     var currency : String {get set}
+//    associatedtype Dinero
     
     init()
-    func multiply(by times:Double) -> Self
-    func plus(other:Self) -> Self
+    func multiply<T:AKCurrency>(by times: Double) -> T
+    func plus<T:AKCurrency>(other: T) -> T
 }
 //MARK: Hashable
 extension AKCurrency {
@@ -32,21 +33,22 @@ extension AKCurrency {
 }
 //MARK: Default Behavior-Methods
 extension AKCurrency {
-//    func multiply(by times:Double) -> Self {
-//        self.amount *= Double(times)
-//        return self
-//    }
+    func plus<T:AKCurrency>(other: T) -> T {
+        //should sheck if are the same currency
+        if self.currency == other.currency {
+            let total = self.amount + other.amount
+            return T(withAmount: total, currency: self.currency)
+        }
+        //should throw an exception if currencies are different
+        //or should identify currencies rates and convert?
+        //not this is the responsability of a AKBrocker
+        return self as! T
+    }
     
-//    func plus(money:Self) -> Self {
-//        //should sheck if are the same currency
-//        if self.currency == money.currency {
-//            let total = self.amount + money.amount
-//            let valor = init(withAmout:total, currency: self.currency)
-//            return valor
-//        }
-//        //should throw an exception if currencies are different
-//        return self
-//    }
+    func multiply<T:AKCurrency>(by times: Double) -> T {
+        let amount = self.amount * times
+        return T(withAmount: amount, currency: self.currency)
+    }
     
     func description() -> String {
         return "<\(type(of:self))>\n\(self.currency)-\(self.amount)"

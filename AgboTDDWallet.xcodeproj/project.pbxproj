@@ -19,6 +19,8 @@
 		EA5AF9AA1F38D59500FFC125 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5AF9A91F38D59500FFC125 /* Assets.xcassets */; };
 		EA5AF9AD1F38D59500FFC125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5AF9AB1F38D59500FFC125 /* LaunchScreen.storyboard */; };
 		EA5AF9D21F38DA3E00FFC125 /* EuroTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AF9D11F38DA3E00FFC125 /* EuroTest.swift */; };
+		EA5F667A1F3FC99900795004 /* AKWalletTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F66791F3FC99900795004 /* AKWalletTest.swift */; };
+		EA5F667C1F3FCBED00795004 /* AKWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F667B1F3FCBED00795004 /* AKWallet.swift */; };
 		EA8B47D81F396742006525AC /* AKCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8B47D71F396742006525AC /* AKCurrency.swift */; };
 		EA8B47DA1F396F08006525AC /* AKCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8B47D71F396742006525AC /* AKCurrency.swift */; };
 		EA9A19DD1F3960B50056263F /* DollarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9A19DC1F3960B50056263F /* DollarTest.swift */; };
@@ -49,6 +51,8 @@
 		EA5AF9B31F38D59500FFC125 /* AgboTDDWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgboTDDWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5AF9B91F38D59500FFC125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA5AF9D11F38DA3E00FFC125 /* EuroTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuroTest.swift; sourceTree = "<group>"; };
+		EA5F66791F3FC99900795004 /* AKWalletTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKWalletTest.swift; sourceTree = "<group>"; };
+		EA5F667B1F3FCBED00795004 /* AKWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKWallet.swift; sourceTree = "<group>"; };
 		EA8B47D71F396742006525AC /* AKCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKCurrency.swift; sourceTree = "<group>"; };
 		EA9A19DC1F3960B50056263F /* DollarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +119,7 @@
 		EA5AF9D01F38DA2000FFC125 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EA5F66791F3FC99900795004 /* AKWalletTest.swift */,
 				EA392C1E1F3D278A00560D5F /* AKBrokerTest.swift */,
 				EA9A19DC1F3960B50056263F /* DollarTest.swift */,
 				EA5AF9D11F38DA3E00FFC125 /* EuroTest.swift */,
@@ -129,6 +134,7 @@
 				EA8B47D71F396742006525AC /* AKCurrency.swift */,
 				EA5676621F3B0C780058F25E /* AKMoney.swift */,
 				EA12D7BB1F3D2A4200137C7D /* AKBroker.swift */,
+				EA5F667B1F3FCBED00795004 /* AKWallet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 			files = (
 				EA12D7BC1F3D2A4200137C7D /* AKBroker.swift in Sources */,
 				EA5676631F3B0C780058F25E /* AKMoney.swift in Sources */,
+				EA5F667C1F3FCBED00795004 /* AKWallet.swift in Sources */,
 				EA5AF9A51F38D59500FFC125 /* ViewController.swift in Sources */,
 				EA5AF9A31F38D59500FFC125 /* AppDelegate.swift in Sources */,
 				EA8B47D81F396742006525AC /* AKCurrency.swift in Sources */,
@@ -248,6 +255,7 @@
 			files = (
 				EA12D7BE1F3D2B8B00137C7D /* AKMoney.swift in Sources */,
 				EA5676611F3B09720058F25E /* AKCurrencyTest.swift in Sources */,
+				EA5F667A1F3FC99900795004 /* AKWalletTest.swift in Sources */,
 				EA5AF9D21F38DA3E00FFC125 /* EuroTest.swift in Sources */,
 				EA12D7BD1F3D2A4C00137C7D /* AKBroker.swift in Sources */,
 				EA9A19DD1F3960B50056263F /* DollarTest.swift in Sources */,

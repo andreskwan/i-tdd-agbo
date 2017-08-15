@@ -43,8 +43,5 @@ class DollarTest: XCTestCase {
         XCTAssertEqual(tenDollars.description(), description)
     }
     
-    func testHashEquality() {
-        XCTAssertEqual(fiveDollars.multiply(by: 2).hashValue,
-                       tenDollars.hashValue)
-    }
+    
 }
