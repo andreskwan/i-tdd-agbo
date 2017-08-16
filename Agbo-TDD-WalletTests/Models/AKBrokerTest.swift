@@ -28,21 +28,26 @@ class AKBrokerTest: XCTestCase {
     }
     
     func testConvertionWithSameCurrencies() {
+        /// $5 to USD = $5
         let fiveConvertedDollars = try! broker.conver(money:fiveDollars,
                                                       toCurrency:"USD")
         XCTAssertEqual(fiveConvertedDollars, fiveDollars)
+        /// €5 to EUR = €5
+        let fiveConvertedEuros = try! broker.conver(money:fiveEuros,
+                                                    toCurrency:"EUR")
+        XCTAssertEqual(fiveConvertedEuros, fiveEuros)
     }
     
     func testConvertionWithDifferentCurrencies() {
         broker.addConversion(rate: 2,
                              fromCurrency: "USD",
                              toCurrency: "EUR")
-        /// $10 to EUR
+        /// $10 to EUR = €5
         let fiveConvertedEuros = try! broker.conver(money:tenDollars,
                                                     toCurrency:"EUR")
         XCTAssertEqual(fiveConvertedEuros, fiveEuros)
         
-        /// €5 to USD
+        /// €5 to USD = $10
         let tenConvertedDollars = try! broker.conver(money:fiveEuros,
                                                     toCurrency:"USD")
         XCTAssertEqual(tenConvertedDollars, tenDollars)
