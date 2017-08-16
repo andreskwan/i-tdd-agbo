@@ -52,7 +52,8 @@ class AKWalletTest: XCTestCase {
         
         let wallet = AKMoney(withAmount:40, currency:"EUR")
         //this addition is not possible yet!
-        //        let oneHundredConvertedDollars = wallet.plus(other: AKMoney(withAmount: 40, currency: "USD") to:"USD")
+        _ = wallet.plus(other: AKMoney(withAmount: 40,
+                                       currency: "USD"))
         
         let eightyConvertedDollars = try! broker.conver(money: wallet,
                                                         toCurrency: "USD")
