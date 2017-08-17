@@ -50,15 +50,17 @@ class AKWalletTest: XCTestCase {
         var broker = AKBroker()
         broker.addConversion(rate: 2, fromCurrency: "USD", toCurrency: "EUR")
         
+        //wallet -> €40=$80
         let wallet = AKMoney(withAmount:40, currency:"EUR")
         //this addition is not possible yet!
+        //wallet -> €40 + $40
         _ = wallet.plus(other: AKMoney(withAmount: 40,
                                        currency: "USD"))
-        
-        let eightyConvertedDollars = try! broker.conver(money: wallet,
-                                                        toCurrency: "USD")
-        let eightyDollars = AKMoney(withAmount: 80, currency: "USD")
-        XCTAssertEqual(eightyDollars,
-                       eightyConvertedDollars)
+        //wallet -> $120
+        let _120convertedDollars = try! broker.conver(money: wallet,
+                                                      toCurrency: "USD", convertable: ConvertWalletToMoney())
+        let _120dollars = AKMoney(withAmount: 120, currency: "USD")
+        XCTAssertEqual(_120dollars,
+                       _120convertedDollars)
     }
 }

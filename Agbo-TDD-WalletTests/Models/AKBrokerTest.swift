@@ -30,11 +30,11 @@ class AKBrokerTest: XCTestCase {
     func testConvertionWithSameCurrencies() {
         /// $5 to USD = $5
         let fiveConvertedDollars = try! broker.conver(money:fiveDollars,
-                                                      toCurrency:"USD")
+                                                      toCurrency:"USD", convertable: ConvertMoneyToMoney()  )
         XCTAssertEqual(fiveConvertedDollars, fiveDollars)
         /// €5 to EUR = €5
         let fiveConvertedEuros = try! broker.conver(money:fiveEuros,
-                                                    toCurrency:"EUR")
+                                                    toCurrency:"EUR", convertable: ConvertMoneyToMoney())
         XCTAssertEqual(fiveConvertedEuros, fiveEuros)
     }
     
@@ -44,19 +44,20 @@ class AKBrokerTest: XCTestCase {
                              toCurrency: "EUR")
         /// $10 to EUR = €5
         let fiveConvertedEuros = try! broker.conver(money:tenDollars,
-                                                    toCurrency:"EUR")
+                                                    toCurrency:"EUR", convertable: ConvertMoneyToMoney())
         XCTAssertEqual(fiveConvertedEuros, fiveEuros)
         
         /// €5 to USD = $10
         let tenConvertedDollars = try! broker.conver(money:fiveEuros,
-                                                    toCurrency:"USD")
+                                                     toCurrency:"USD", convertable: ConvertMoneyToMoney())
         XCTAssertEqual(tenConvertedDollars, tenDollars)
     }
     
     func testThatNoRateRaisesException() {
         /// no rates
         XCTAssertThrowsError(try broker.conver(money:fiveDollars,
-                                               toCurrency:"EUR"))
+                                               toCurrency:"EUR",
+                                               convertable: ConvertMoneyToMoney()))
     }
     
     /*

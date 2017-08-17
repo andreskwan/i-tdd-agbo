@@ -8,35 +8,21 @@
 
 import Foundation
 
-/*
- AKBroker should know coversion between
- */
-enum AKBrokerErrors : Error {
-    case NoConversionRateException
-}
 struct AKBroker {
     var rates:[String:Double] = [:]
-    
-    /// The generic constraing AKCurrency indicates that this method could act
-    /// on any type that conforms the protocol AKCUrrency
-    /// - Parameters:
-    ///   - money: Any type that conforms AKCurrency
-    ///   - toCurrency: String that represents a currency
-    /// - Returns: A type that implements AKCurrency
-    /// - Throws: if there is not a valid rate for conversion between currencies
+//    var convertable:CustomCurrencyConvertible = ConvertMoneyToMoney()
+//    
+//    mutating func set(convertable:CustomCurrencyConvertible){
+//        self.convertable = convertable
+//    }
+    //should throw if convertable is not set
     func conver<T:AKCurrency>(money:T,
-                              toCurrency:String) throws -> AKMoney
+                              toCurrency:String,
+                              convertable:CustomCurrencyConvertible) throws -> T
     {
-        var newAmount = money.amount
-        if money.currency != toCurrency {
-            let rateConversionKey = key(from: money.currency,
-                                        toCurrency: toCurrency)
-            guard let rate = rates[rateConversionKey] else {
-                throw AKBrokerErrors.NoConversionRateException
-            }
-            newAmount = money.amount/rate
-        }
-        return AKMoney(withAmount: newAmount, currency: toCurrency)
+        return try convertable.conver(money: money,
+                                      toCurrency: toCurrency,
+                                      rates: rates)
     }
     
     mutating func addConversion(rate: Double,
