@@ -21,15 +21,15 @@ class AKWalletTest: XCTestCase {
         super.tearDown()
     }
     
-    func testMultiplyAmount() {
-        //how do I know if I need a protocol?
-        //because you will need to understand and model your project
-        
-        //xcode should suggest me to create this class for me.
-        let tenWalletDollars = AKWallet(withAmount: 10, currency: "USD")
-        XCTAssertEqual(AKWallet(withAmount: 10, currency: "USD"),
-                       tenWalletDollars)
-    }
+//    func testMultiplyAmount() {
+//        //how do I know if I need a protocol?
+//        //because you will need to understand and model your project
+//
+//        //xcode should suggest me to create this class for me.
+//        let tenWalletDollars = AKWallet(withAmount: 10, currency: "USD")
+//        XCTAssertEqual(AKWallet(withAmount: 10, currency: "USD"),
+//                       tenWalletDollars)
+//    }
     
 //    func testAdditionWithConvertion() {
 //        var broker = AKBroker()
@@ -46,21 +46,7 @@ class AKWalletTest: XCTestCase {
     /*
      Working on this test to implement addition among different currencies
      */
-    func testAdditionWithConvertion() {
-        var broker = AKBroker()
-        broker.addConversion(rate: 2, fromCurrency: "USD", toCurrency: "EUR")
+    func testPlus() {
         
-        //wallet -> €40=$80
-        let wallet = AKMoney(withAmount:40, currency:"EUR")
-        //this addition is not possible yet!
-        //wallet -> €40 + $40
-        _ = wallet.plus(other: AKMoney(withAmount: 40,
-                                       currency: "USD"))
-        //wallet -> $120
-        let _120convertedDollars = try! broker.conver(money: wallet,
-                                                      toCurrency: "USD", convertable: ConvertWalletToMoney())
-        let _120dollars = AKMoney(withAmount: 120, currency: "USD")
-        XCTAssertEqual(_120dollars,
-                       _120convertedDollars)
     }
 }
