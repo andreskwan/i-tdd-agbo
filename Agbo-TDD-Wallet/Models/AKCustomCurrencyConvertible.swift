@@ -11,9 +11,6 @@ import Foundation
 /*
  AKBroker should know coversion between
  */
-enum AKConvetionErrors : Error {
-    case NoConversionRateException
-}
 
 protocol CustomCurrencyConvertible {
 

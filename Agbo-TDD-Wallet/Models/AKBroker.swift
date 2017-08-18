@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum AKConvetionErrors : Error {
+    case NoConversionRateException
+}
+
 struct AKBroker {
     var rates:[String:Double] = [:]
 //    var convertable:CustomCurrencyConvertible = ConvertMoneyToMoney()
@@ -16,13 +20,39 @@ struct AKBroker {
 //        self.convertable = convertable
 //    }
     //should throw if convertable is not set
-    func conver<T:AKCurrency>(money:T,
-                              toCurrency:String,
-                              convertable:CustomCurrencyConvertible) throws -> T
+//    func conver(money:AKMoney,
+//                              toCurrency:String,
+//                              convertable:CustomCurrencyConvertible) throws -> AKMoney
+//    {
+//        return try convertable.conver(money: money,
+//                                      toCurrency: toCurrency,
+//                                      rates: rates)
+//    }
+    
+    func conver(money:AKMoney,
+                toCurrency:String) throws -> AKMoney
     {
-        return try convertable.conver(money: money,
-                                      toCurrency: toCurrency,
-                                      rates: rates)
+        var newAmount = money.amount
+        if money.currency != toCurrency {
+            let rateConversionKey = key(from: money.currency,
+                                        toCurrency: toCurrency)
+            guard let rate = rates[rateConversionKey] else {
+                throw AKConvetionErrors.NoConversionRateException
+            }
+            newAmount = money.amount/rate
+        }
+        return AKMoney(withAmount: newAmount, currency: toCurrency)
+    }
+    
+    func conver(wallet:[AKMoney],
+                toCurrency:String) throws -> AKMoney
+    {
+        var total = AKMoney(withAmount: 0, currency: toCurrency)
+        for money in wallet {
+            total = total.plus(other: try self.conver(money: money,
+                                                      toCurrency: toCurrency))
+        }
+        return total
     }
     
     mutating func addConversion(rate: Double,
