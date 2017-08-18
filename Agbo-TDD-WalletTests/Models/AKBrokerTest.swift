@@ -30,11 +30,11 @@ class AKBrokerTest: XCTestCase {
     func testConvertionWithSameCurrencies() {
         /// $5 to USD = $5
         let fiveConvertedDollars = try! broker.conver(money:fiveDollars,
-                                                      toCurrency:"USD", convertable: ConvertMoneyToMoney()  )
+                                                      toCurrency:"USD")
         XCTAssertEqual(fiveConvertedDollars, fiveDollars)
         /// €5 to EUR = €5
         let fiveConvertedEuros = try! broker.conver(money:fiveEuros,
-                                                    toCurrency:"EUR", convertable: ConvertMoneyToMoney())
+                                                    toCurrency:"EUR")
         XCTAssertEqual(fiveConvertedEuros, fiveEuros)
     }
     
@@ -44,24 +44,45 @@ class AKBrokerTest: XCTestCase {
                              toCurrency: "EUR")
         /// $10 to EUR = €5
         let fiveConvertedEuros = try! broker.conver(money:tenDollars,
-                                                    toCurrency:"EUR", convertable: ConvertMoneyToMoney())
+                                                    toCurrency:"EUR")
         XCTAssertEqual(fiveConvertedEuros, fiveEuros)
         
         /// €5 to USD = $10
         let tenConvertedDollars = try! broker.conver(money:fiveEuros,
-                                                     toCurrency:"USD", convertable: ConvertMoneyToMoney())
+                                                     toCurrency:"USD")
         XCTAssertEqual(tenConvertedDollars, tenDollars)
     }
     
     func testThatNoRateRaisesException() {
         /// no rates
         XCTAssertThrowsError(try broker.conver(money:fiveDollars,
-                                               toCurrency:"EUR",
-                                               convertable: ConvertMoneyToMoney()))
+                                               toCurrency:"EUR"))
     }
     
     /*
      testNonValidConversion
      - currency
      */
+    
+        func testMultipleConvertions() {
+            var broker = AKBroker()
+            broker.addConversion(rate: 2, fromCurrency: "USD", toCurrency: "EUR")
+    
+            //wallet -> €40=$80
+            var wallet = [AKMoney]()
+            //this addition is not possible yet!
+            //wallet -> €40 + $40
+            let fortyEuro = AKMoney(withAmount: 40,
+                                       currency: "EUR")
+            wallet.append(fortyEuro)
+            wallet.append(AKMoney(withAmount: 40, currency: "USD"))
+            print("-----------------wallet.count: \(wallet.count)")
+            //wallet -> $120
+            let _120convertedDollars = try! broker.conver(wallet: wallet,
+                                                          toCurrency: "USD")
+            let _120dollars = AKMoney(withAmount: 120, currency: "USD")
+            XCTAssertEqual(_120dollars,
+                           _120convertedDollars)
+        }
+
 }

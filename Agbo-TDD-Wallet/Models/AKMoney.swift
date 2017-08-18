@@ -13,6 +13,6 @@ struct AKMoney: AKCurrency {
     var currency: String
     init() {
         amount = 0
-        currency = ""
+        currency = "USD"
     }
 }
